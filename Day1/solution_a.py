@@ -1,0 +1,16 @@
+with open("Day1/input.txt", "r") as f:
+    data = f.read()
+
+list = data.split("\n")
+
+
+total = 0
+totals_list = []
+for item in list:
+    if item != "":
+        total += int(item)
+    else:
+        totals_list.append(total)
+        total = 0
+
+print(max(totals_list))
